@@ -1,19 +1,52 @@
 header {
-  width: 100%;
-  background-color: grey;
-  margin: 0;
-  padding: 20px;
+	width: 100%;
+	background-color: #b2e7c4;
+	margin: 0;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
 }
 
 header > h1 {
-  font-size: 2em;
+	font-size: 2em;
+}
+
+header >ul{
+  display: flex;
+  justify-content: center;
 }
 
 header > ul > li {
   display: inline;
-  padding: 10px;
+	padding: 15px 15px;
+	margin: 0 auto;
 }
 
 .mainContent {
-  padding: 1em;
+	padding: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+ul > li.link > a {
+	text-decoration: none;
+	color: black;
+}
+
+ul > li.link > a:hover {
+	text-decoration: underline;
+}
+
+ul > li.employee_detail > a {
+	text-decoration: none;
+	color: black;
+}
+
+ul > li.employee_detail > a:hover {
+	text-decoration: underline;
+}
+
+ul > li.emp_det {
+	padding: 10px;
+	list-style-type: none;
 }

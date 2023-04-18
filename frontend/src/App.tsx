@@ -34,17 +34,17 @@ export class App extends React.Component<AppProps, AppState> {
         </header>
         <div className="mainContent">
           <Switch>
-            <Route path="/employees">
+            <Route path="/employees" exact>
               <EmployeeList />
             </Route>
             <Route path="/employee/:id">
               <EmployeeDetail />
             </Route>
-            <Route path="/departments">
+            <Route path="/departments" exact>
               <DepartmentList />
             </Route>
             <Route path="/department/:id">
-              <DepartmentDetails />
+              <DepartmentDetails   />
             </Route>
             <Route path="/">
               <EmployeeList />

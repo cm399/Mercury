@@ -1,6 +1,7 @@
 import React from "react";
 import { Employee } from "../models/Models";
 import api from "../utils/api";
+import { Link } from "react-router-dom";
 
 type EmployeeListProps = {};
 type EmployeeListState = {
@@ -41,7 +42,7 @@ type EmployeeDetailProps = {
 const EmployeeDetail = ({ employee }: EmployeeDetailProps) => {
 	return (
 		<li className="employee_detail">
-			<h3>{employee.name}</h3>
+			<Link to={`employee/${employee.id}`}>{employee.name}</Link>
 		</li>
 	)
 }

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
 import { Department } from "../models/Models"
 import api from "../utils/api"
+import { Link } from "react-router-dom"
 
 export const DepartmentList = () => {
-	const [departments, setDepartments] = useState<Department[]|undefined>()
+	const [departments, setDepartments] = useState<Department[] | undefined>()
 
 
 	useEffect(() => {
@@ -20,6 +21,7 @@ export const DepartmentList = () => {
 	}, [])
 
 
+
 	if (!departments) {
 		return <p>Loading Departments...</p>
 	}
@@ -27,13 +29,13 @@ export const DepartmentList = () => {
 		return <p>No departments</p>
 	}
 
-  	return (
-		  <>
-		<h2>Department List</h2>
-		
-		<ul>
-			{departments.map(d => <li>{d.name}</li>)}
-		</ul>
+	return (
+		<>
+			<h2>Department List</h2>
+
+			<ul>
+				{departments.map(d => <li className="link" key={d.id}><Link to={`/department/${d.id}`}>{d.name}</Link></li>)}
+			</ul>
 		</>
 	)
 }

@@ -12,3 +12,9 @@ export interface Department {
 	name: string;
 	employeeIds: string[];
 }
+export interface IDepartmentDetails {
+	id: string;
+	name: string;
+	employeeDetails: Employee[];
+	employeeIds: string[];
+}
