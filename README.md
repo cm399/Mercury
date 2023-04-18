@@ -29,3 +29,17 @@ npm run start:dev
 cd frontend
 REACT_APP_API_HOST=http://localhost:3000 npm run start:dev
 ```
+
+## The list of what I did: 
+
+### Frontend:
+- CSS modification
+- Corrected routes
+- Fixed department fetching
+- Added details pages
+
+### Backend:
+- Added department/:id and employee/:id endpoints
+- Added tests
+- Fixed failing tests
+- Moved user and department data to global variable space as constants
